@@ -15,10 +15,17 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "storybook-dark-mode",
   ],
+
+  env: (config) => ({
+    ...config,
+    STORYBOOK: "true",
+  }),
+
   framework: {
     name: "@storybook/nextjs",
     options: {},
   },
   staticDirs: [],
 };
+
 export default config;
